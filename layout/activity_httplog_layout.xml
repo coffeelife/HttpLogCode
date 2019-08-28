@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/bg_color"
+android:orientation="vertical">
+
+<include layout="@layout/titlebar_base_layout" />
+
+<EditText
+    android:id="@+id/et_name"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dimen_8dp"
+    android:background="@color/color_EDEDED"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:hint="接口名称"
+    android:padding="@dimen/dimen_10dp"
+    android:textSize="@dimen/dimen_14dp" />
+
+<com.scwang.smartrefresh.layout.SmartRefreshLayout
+    android:id="@+id/smart_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_bar" />
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>
